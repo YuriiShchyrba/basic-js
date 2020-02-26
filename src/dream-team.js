@@ -1,4 +1,4 @@
-module.exports = function createDreamTeam(/* members */) {
-  throw 'Not implemented';
-  // remove line with error and write your code here
+module.exports = function createDreamTeam(str) {
+ return str.filter(x=>{ if ( x[0].match(/[A-Z]/i) ){return x[0];}).sort();
+
 };
