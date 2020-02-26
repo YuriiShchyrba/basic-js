@@ -3,7 +3,6 @@ module.exports = function createDreamTeam(str) {
   {
     var arr ="";
     for (var i = 0; i < str.length; i++) {
-      str[i] = str[i].toUpperCase();
       str[i] = str[i].replace(/ /g, "");
   }
   
@@ -18,7 +17,7 @@ module.exports = function createDreamTeam(str) {
   
    arr =arr.split("").sort().join("") ;
     if ( arr.length == 0) { return false;}
-    return arr;
+    return arr.toUpperCase();
   }
   return false;
 };
