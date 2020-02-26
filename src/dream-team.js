@@ -11,13 +11,11 @@ module.exports = function createDreamTeam(str) {
   }
   
   
-    for ( var i = 0 ; i < str.length ; i++)
-    {
-      if ( str[i][0].match(/[A-Z]/i) )
-      {
-          arr+=str[i][0];
-      }
-    }
+  for (var i = 0; i < str.length; i++) {
+    if (str[i][0].match(/[A-Z]/i) && typeof (str[i]) == "string" ) {
+        arr += str[i][0];
+    } 
+}
   
    arr =arr.split("").sort().join("") ;
     if ( arr.length == 0) { return false;}
