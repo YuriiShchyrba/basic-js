@@ -3,7 +3,11 @@ module.exports = function createDreamTeam(str) {
   {
     var arr ="";
     for (var i = 0; i < str.length; i++) {
-      str[i] = str[i].replace(/ /g, "");
+      if ( typeof(str[i])=="string" )
+      {
+        str[i] = str[i].replace(/ /g, "");
+      }
+      
   }
   
   
