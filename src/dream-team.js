@@ -16,10 +16,10 @@ module.exports = function createDreamTeam(str) {
         arr += str[i][0];
     } 
 }
-  
+  arr =arr.toUpperCase();
    arr =arr.split("").sort().join("") ;
     if ( arr.length == 0) { return false;}
-    return arr.toUpperCase();
+    return arr;
   }
   return false;
 };
