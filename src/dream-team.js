@@ -8,6 +8,7 @@ module.exports = function createDreamTeam(str) {
     }
   }
 
- return  arr.split("").sort().join("");
-
+ arr =arr.split("").sort().join("") ;
+  if ( arr.length == 0) { return false;}
+  return arr;
 };
