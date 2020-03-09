@@ -3,6 +3,8 @@ module.exports = function transform( arr ) {
     var res=[];
     for ( var i = 0 ; i < arr.length; i++)
     {
+        if( arr[i] == undefined) continue;
+        
         switch (arr[i])
         {
             case "--discard-next":
