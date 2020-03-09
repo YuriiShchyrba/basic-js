@@ -1,5 +1,5 @@
 module.exports = function transform( arr ) {
-    if( !Array.isArray(arr)) return false;
+    if( !Array.isArray(arr)) throw new Error;
 
     return true;
 };
