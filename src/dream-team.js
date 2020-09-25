@@ -1,28 +1,13 @@
-module.exports = function createDreamTeam(str) {
-  if( Array.isArray(str))
-  {
-    var arr ="";
-    for (var i = 0; i < str.length; i++) {
-      if (typeof (str[i]) == "string") {
-          str[i] = str[i].replace(/ /g, "");
-      }
-      else {
-          str.splice(i, 1);
-          i--;
-      }
 
+
+module.exports = function createDreamTeam(str) {
+  if (!Array.isArray(str) || !str.length) return false;
+  let s = '';
+  for (let i = 0; i < str.length; i++) {
+      if (typeof str[i] != 'string') continue;
+      let help = str[i].trim();
+      s += help[0].toUpperCase();
   }
-  
-  
-  for (var i = 0; i < str.length; i++) {
-    if (str[i][0].match(/[A-Z]/i) && typeof (str[i]) == "string" ) {
-        arr += str[i][0];
-    } 
-}
-  arr =arr.toUpperCase();
-   arr =arr.split("").sort().join("") ;
-    if ( arr.length == 0) { return false;}
-    return arr;
-  }
-  return false;
+  s = s.split('').sort().join('');
+  return s;
 };
